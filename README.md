@@ -1,8 +1,8 @@
-# vira-image-editor
+# vue-picture-compressor
 
 ## Project setup
 ```
-npm install
+npm install --save
 ```
 
 ### Compiles and hot-reloads for development
