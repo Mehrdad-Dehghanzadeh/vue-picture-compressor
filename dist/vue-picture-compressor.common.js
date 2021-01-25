@@ -1422,7 +1422,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       // If no match, return null
       return null;
     }
-  };
+  }
 
   return getCurrentScript
 }));
@@ -2090,35 +2090,6 @@ var classof = __webpack_require__("f5df");
 module.exports = TO_STRING_TAG_SUPPORT ? {}.toString : function toString() {
   return '[object ' + classof(this) + ']';
 };
-
-
-/***/ }),
-
-/***/ "b0c0":
-/***/ (function(module, exports, __webpack_require__) {
-
-var DESCRIPTORS = __webpack_require__("83ab");
-var defineProperty = __webpack_require__("9bf2").f;
-
-var FunctionPrototype = Function.prototype;
-var FunctionPrototypeToString = FunctionPrototype.toString;
-var nameRE = /^\s*function ([^ (]*)/;
-var NAME = 'name';
-
-// Function instances `.name` property
-// https://tc39.es/ecma262/#sec-function-instances-name
-if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
-  defineProperty(FunctionPrototype, NAME, {
-    configurable: true,
-    get: function () {
-      try {
-        return FunctionPrototypeToString.call(this).match(nameRE)[1];
-      } catch (error) {
-        return '';
-      }
-    }
-  });
-}
 
 
 /***/ }),
@@ -2957,9 +2928,6 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
 
@@ -3039,12 +3007,12 @@ function _objectSpread2(target) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a4e07bfe-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/imageEditor.vue?vue&type=template&id=cb5a365a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a4e07bfe-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/imageEditor.vue?vue&type=template&id=c4360070&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"image-editor"}},[_c('div',[_c('h1',[_vm._v("Hello world")]),_c('input',{attrs:{"type":"file"},on:{"change":_vm.uploadFile}})]),(_vm.file)?_c('my-image',{attrs:{"src":_vm.src}}):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/imageEditor.vue?vue&type=template&id=cb5a365a&
+// CONCATENATED MODULE: ./src/components/imageEditor.vue?vue&type=template&id=c4360070&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a4e07bfe-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/myImage.vue?vue&type=template&id=1dbae5d5&
 var myImagevue_type_template_id_1dbae5d5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"my-image-component",style:({ maxWidth: _vm.maxWidth + 'px', maxHeight: _vm.maxHeight + 'px' })},[_c('div',{staticClass:"image-wrapper",style:({ maxHeight: _vm.maxHeight + 'px' })}),_c('image-cropper',{directives:[{name:"show",rawName:"v-show",value:(_vm.showCropper),expression:"showCropper"}],style:({
@@ -4301,7 +4269,7 @@ var myImage_component = normalizeComponent(
 
 
 /* harmony default export */ var imageEditorvue_type_script_lang_js_ = ({
-  name: "imageEditor",
+  name: "image-editor",
   components: {
     myImage: myImage
   },
@@ -4389,7 +4357,6 @@ var defaultOptions = {
 /* harmony default export */ var core_defaultOptions = (defaultOptions);
 // CONCATENATED MODULE: ./src/install.js
 
-
 // default setting
 
 
@@ -4399,7 +4366,7 @@ var install_imageEditor = {
     //set settings
     imageOptions = _objectSpread2(_objectSpread2({}, core_defaultOptions), opts); //inject function in component
 
-    Vue.component(imageEditor.name, imageEditor);
+    Vue.component('image-editor', imageEditor);
   }
 }; //for auto install
 

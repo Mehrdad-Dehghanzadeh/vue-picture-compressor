@@ -20,7 +20,7 @@ import {
 import { clearInput } from "../core/cropper";
 
 export default {
-  name: "imageEditor",
+  name: "image-editor",
   components: {
     myImage
   },

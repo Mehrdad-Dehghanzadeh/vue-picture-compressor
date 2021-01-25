@@ -9,7 +9,7 @@ const imageEditor =  {
         //set settings
         imageOptions = { ...defaultOptions, ...opts }
         //inject function in component
-        Vue.component(ImageEditor.name, ImageEditor)
+        Vue.component('image-editor', ImageEditor)
     }
 }
 //for auto install
