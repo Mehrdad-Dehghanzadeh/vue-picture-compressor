@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#image-editor {
+  padding: 10px;
+  direction: rtl;
+}
+
+.row {
+  width: 100%;
+  padding: 5px;
+}
+
+.image-cropper {
+  position: absolute;
+  z-index: 12;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 0 2000000px rgba(255, 255, 255, 0.57);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  cursor: move;
+
+  .line-dashed-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    z-index: 13;
+    background-color: rgba(255, 255, 255, 0) !important;
+
+    .line-dashed {
+      border: 0 dashed #eee;
+      display: block;
+      opacity: 0.5;
+      position: absolute;
+      cursor: none;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .dashed-h {
+      border-bottom-width: 2px;
+      height: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    $dashedConst: 33.3333%;
+
+    #dashed-h-1 {
+      top: $dashedConst;
+    }
+
+    #dashed-h-2 {
+      top: 2 * $dashedConst;
+    }
+
+    .dashed-v {
+      border-left-width: 2px;
+      height: 100%;
+      top: 0;
+      width: 0;
+    }
+
+    #dashed-v-1 {
+      left: $dashedConst;
+    }
+
+    #dashed-v-2 {
+      left: 2 * $dashedConst;
+    }
+  }
+
+  .cropper-handler {
+    position: absolute;
+    background-color: #000000;
+    border: rgba(225, 225, 225, 0.71) solid 1px;
+    z-index: 10;
+    user-select: none;
+
+    .cropper-handler-bullet {
+      border-radius: 6px;
+      background-color: rgba(15, 15, 15, 0.8);
+      position: relative;
+      border: 3px solid rgba(225, 225, 225, 0.71);
+      user-select: none;
+    }
+
+    .cropper-handler-bullet--vertical {
+      width: 10px;
+      height: 30px;
+      top: 45%;
+    }
+
+    .cropper-handler-bullet--horizontal {
+      max-width: 30px;
+      height: 10px;
+      margin: 0 auto;
+    }
+
+    $handlerBulletPosition: 5px;
+
+    #cropper-handler-bullet--top {
+      top: $handlerBulletPosition;
+    }
+
+    #cropper-handler-bullet--right {
+      right: $handlerBulletPosition;
+    }
+
+    #cropper-handler-bullet--bottom {
+      bottom: 3 * $handlerBulletPosition;
+    }
+
+    #cropper-handler-bullet--left {
+      left: 3 * $handlerBulletPosition;
+    }
+  }
+
+  .cropper-handler--horizontal {
+    height: 3px;
+    width: 100%;
+    cursor: n-resize;
+  }
+
+  .cropper-handler--vertical {
+    width: 3px;
+    height: 100%;
+    cursor: e-resize;
+  }
+
+  $cropperHandlerPosition : 0;
+
+  #cropper-handler--top {
+    top: $cropperHandlerPosition;
+  }
+
+  #cropper-handler--right {
+    right: $cropperHandlerPosition;
+  }
+
+  #cropper-handler--bottom {
+    bottom: $cropperHandlerPosition;
+  }
+
+  #cropper-handler--left {
+    left: $cropperHandlerPosition;
+  }
+}
+
+.my-image-component {
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+
+  .image-wrapper {
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    max-width: none;
+    max-height: none;
+    overflow: hidden;
+
+    .my-image {
+      display: block;
+      width: 100%;
+      max-height: inherit;
+      margin: 0 auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(200, 200, 200, 0.6);
+    }
+  }
+}
+
+#image-editor-console {
+  border: 1px solid rgba(44, 62, 80, 0.4);
+  margin-bottom: 10px;
+
+  .console {
+    padding: 5px 10px;
+
+    .console__editor-wrapper {
+      transition: all ease 500ms;
+    }
+
+    .console__btn-wrapper {
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    .console__image-detail {
+      text-align: left;
+    }
+  }
+
+}

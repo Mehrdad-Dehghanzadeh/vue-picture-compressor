@@ -1,10 +1,31 @@
 {
-  "name": "vira-image-editor",
+  "name": "vue-picture-compressor",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "name": "Mehrdad Dehghanzadeh",
+    "email": "mehrdad.dehghanzadeh.dev@gmail.com"
+  },
+  "keywords": [
+    "vue",
+    "vue-plugins",
+    "vue-picture-compressor",
+    "vue picture compressoer",
+    "vue-image-cropper",
+    "vue image cropper",
+    "image compressor",
+    "image-compressor",
+    "image change quality",
+    "image-change-quality",
+    "picture-compressor",
+    "picture compressor",
+    "picture-change-quality",
+    "picture change quality"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-picture-compressor ./src/install.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -26,6 +47,8 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
+  "main": "dist/vue-picture-compressor.common.js",
+  "files": ["dist/*"],
   "eslintConfig": {
     "root": true,
     "env": {
@@ -39,17 +62,15 @@
       "parser": "babel-eslint"
     },
     "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
+    "overrides": [{
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "env": {
+        "jest": true
       }
-    ]
+    }]
   },
   "browserslist": [
     "> 1%",
