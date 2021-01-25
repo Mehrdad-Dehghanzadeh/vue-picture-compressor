@@ -13,8 +13,9 @@ const imageEditor =  {
     }
 }
 //for auto install
-// if (typeof window !== 'undefined' && window.Vue) {
-//     window.Vue.use(imageEditor)
-// }
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(imageEditor)
+}
+
 export { imageOptions }
 export default imageEditor

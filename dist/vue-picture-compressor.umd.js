@@ -1431,7 +1431,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       // If no match, return null
       return null;
     }
-  }
+  };
 
   return getCurrentScript
 }));
@@ -4411,9 +4411,10 @@ var install_imageEditor = {
     Vue.component(imageEditor.name, imageEditor);
   }
 }; //for auto install
-// if (typeof window !== 'undefined' && window.Vue) {
-//     window.Vue.use(imageEditor)
-// }
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(install_imageEditor);
+}
 
 
 /* harmony default export */ var src_install = (install_imageEditor);
