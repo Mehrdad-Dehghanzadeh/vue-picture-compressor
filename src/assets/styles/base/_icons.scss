@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "vue-picture-compressor";
+  src: url("~@/assets/icons/vue-picture-compressor.eot?3rrxi0");
+  src: url("~@/assets/icons/vue-picture-compressor.eot?3rrxi0#iefix") format("embedded-opentype"),
+    url("~@/assets/icons/vue-picture-compressor.ttf?3rrxi0") format("truetype"),
+    url("~@/assets/icons/vue-picture-compressor.woff?3rrxi0") format("woff"),
+    url("~@/assets/icons/vue-picture-compressor.svg?3rrxi0#vue-picture-compressor") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "vue-picture-compressor" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\e900";
+}
+
+.icon-check-circle:before {
+  content: "\e901";
+}
+
+.icon-check-square:before {
+  content: "\e902";
+}
+
+.icon-copy:before {
+  content: "\e903";
+}
+
+.icon-crop:before {
+  content: "\e904";
+}
+
+.icon-edit:before {
+  content: "\e905";
+}
+
+.icon-external-link:before {
+  content: "\e906";
+}
+
+.icon-image:before {
+  content: "\e907";
+}
+
+.icon-maximize:before {
+  content: "\e908";
+}
+
+.icon-maximize-2:before {
+  content: "\e909";
+}
+
+.icon-menu:before {
+  content: "\e90a";
+}
+
+.icon-minimize:before {
+  content: "\e90b";
+}
+
+.icon-minimize-2:before {
+  content: "\e90c";
+}
+
+.icon-minus:before {
+  content: "\e90d";
+}
+
+.icon-minus-circle:before {
+  content: "\e90e";
+}
+
+.icon-minus-square:before {
+  content: "\e90f";
+}
+
+.icon-move:before {
+  content: "\e910";
+}
+
+.icon-plus:before {
+  content: "\e911";
+}
+
+.icon-plus-circle:before {
+  content: "\e912";
+}
+
+.icon-plus-square:before {
+  content: "\e913";
+}
+
+.icon-refresh-cw:before {
+  content: "\e914";
+}
+
+.icon-rotate-ccw:before {
+  content: "\e915";
+}
+
+.icon-rotate-cw:before {
+  content: "\e916";
+}
+
+.icon-save:before {
+  content: "\e917";
+}
+
+.icon-scissors:before {
+  content: "\e918";
+}
+
+.icon-settings:before {
+  content: "\e919";
+}
+
+.icon-sliders:before {
+  content: "\e91a";
+}
+
+.icon-tool:before {
+  content: "\e91b";
+}
+
+.icon-trash-2:before {
+  content: "\e91c";
+}
+
+.icon-upload:before {
+  content: "\e91d";
+}
+
+.icon-x:before {
+  content: "\e91e";
+}
+
+.icon-x-circle:before {
+  content: "\e91f";
+}
+
+.icon-x-square:before {
+  content: "\e920";
+}
+
+.icon-zoom-in:before {
+  content: "\e921";
+}
+
+.icon-zoom-out:before {
+  content: "\e922";
+}
